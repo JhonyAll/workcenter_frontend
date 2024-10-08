@@ -4,12 +4,13 @@ import { useState } from "react";
 import { PiEye, PiEyeSlash } from "react-icons/pi";
 import InputComponent from "./input";
 import ButtonComponent from "./button";
+import Link from "next/link";
 
 const Login = () => {
   const [reveledPassword, setReveledPassword] = useState(false);
 
   return (
-    <form className="bg-gray-100 text-gray-800 w-full h-full px-14 py-32 rounded-lg shadow-lg flex flex-col justify-center align-center gap-20 dark:bg-gray-900 dark:text-gray-50 dark:shadow-xl xl:w-4/12 lg:w-6/12 lg:max-h-[40rem] md:w-3/5 md:max-h-[40rem]">
+    <form className="bg-gray-100 text-gray-800 w-full h-full px-14 py-32 rounded-lg shadow-lg flex flex-col justify-center align-center gap-20 dark:bg-gray-900 dark:text-gray-50 dark:shadow-xl 2xl:w-4/12 xl:w-6/12 lg:w-6/12 lg:max-h-[40rem] md:w-3/5 md:max-h-[40rem]">
       <h1 className="text-4xl font-bold text-center">Logar</h1>
       <div className="text-zinc-700 flex flex-col gap-6">
         <div className="w-full h-14 relative">
@@ -51,16 +52,18 @@ const Login = () => {
           bgColor="bg-purple-400"
           darkBgColor="bg-purple-500"
           textColor=""
-          hoverBgColor="bg-purple-500"
+          hoverBgColor="bg-transparent"
           hoverDarkBgColor="bg-purple-600"
           buttonSubmit={true}
         />
 
         <p className="text-gray-800 text-sm text-gray-50 select-none mt-4 dark:text-gray-50">
           {`Não possui uma conta? `}
-          <span className="cursor-pointer hover:text-purple-500 dark:hover:text-purple-300">
-            Cadastrar-se
-          </span>
+          <Link href="/cadastrar-se">
+            <span className="cursor-pointer hover:text-purple-500 dark:hover:text-purple-300">
+              Cadastrar-se
+            </span>
+          </Link>
         </p>
       </div>
     </form>

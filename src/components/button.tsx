@@ -24,7 +24,7 @@ const ButtonComponent = ({
       type={buttonSubmit ? "submit" : "button"}
       className={`${
         bgColor + textColor
-      } font-bold select-none w-full h-14 rounded hover:${hoverBgColor} dark:${darkBgColor} dark:hover:${hoverDarkBgColor}`}
+      } font-bold select-none w-full h-14 rounded hover:bg-transparent border-solid border border-transparent hover:border-slate-700 transition-all dark:${darkBgColor} dark:hover:${hoverDarkBgColor}`}
     >
       {text}
     </button>
